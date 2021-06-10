@@ -17,7 +17,7 @@ public class MenuUIHandler : MonoBehaviour
     // Update is called once per frame
     private void Awake()
     {
-        highScoreText.text = "Highscore: " + GameManager.instance.highScoreName + " :" + GameManager.instance.highScore;
+        highScoreText.text = "Highscore: " + GameManager.instance.highScoreName + " : " + GameManager.instance.highScore;
     }
 
     public void StartGame()

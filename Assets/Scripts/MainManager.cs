@@ -27,6 +27,7 @@ public class MainManager : MonoBehaviour
     void Start()
     {
         UpdateHighScore();
+        ScoreText.text = GameManager.instance.currentName + "'s" + $" score : 0";
         const float step = 0.6f;
         int perLine = Mathf.FloorToInt(4.0f / step);
         
@@ -69,13 +70,13 @@ public class MainManager : MonoBehaviour
 
     private void UpdateHighScore()
     {
-        highScoreText.text = "Highscore: " + GameManager.instance.highScoreName + " :" + GameManager.instance.highScore;
+        highScoreText.text = "Highscore: " + GameManager.instance.highScoreName + " : " + GameManager.instance.highScore;
     }
 
     void AddPoint(int point)
     {
         m_Points += point;
-        ScoreText.text = $"Score : {m_Points}";
+        ScoreText.text = GameManager.instance.currentName +"'s" + $" score : {m_Points}";
     }
 
     public void GameOver()
